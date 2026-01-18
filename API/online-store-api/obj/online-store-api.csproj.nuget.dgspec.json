@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OnlineStore\\online-store-api\\online-store-api\\online-store-api.csproj": {}
+    "D:\\OnlineStore\\API\\online-store-api\\online-store-api.csproj": {}
   },
   "projects": {
-    "D:\\OnlineStore\\online-store-api\\online-store-api\\online-store-api.csproj": {
+    "D:\\OnlineStore\\API\\online-store-api\\online-store-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OnlineStore\\online-store-api\\online-store-api\\online-store-api.csproj",
+        "projectUniqueName": "D:\\OnlineStore\\API\\online-store-api\\online-store-api.csproj",
         "projectName": "online-store-api",
-        "projectPath": "D:\\OnlineStore\\online-store-api\\online-store-api\\online-store-api.csproj",
+        "projectPath": "D:\\OnlineStore\\API\\online-store-api\\online-store-api.csproj",
         "packagesPath": "C:\\Users\\Tushar Ladava\\.nuget\\packages\\",
-        "outputPath": "D:\\OnlineStore\\online-store-api\\online-store-api\\obj\\",
+        "outputPath": "D:\\OnlineStore\\API\\online-store-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
