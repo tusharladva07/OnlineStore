@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/UI/online-store-ui/.vscode
+/online-store-api/.vs/online-store-api.slnx
+/online-store-api/online-store-api/obj
