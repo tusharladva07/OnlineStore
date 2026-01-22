@@ -109,7 +109,6 @@ D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\staticwebassets.build.json.
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\staticwebassets.development.json
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\swae.build.ex.cache
-D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\OnlineSt.9E8DCEEF.Up2Date
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\OnlineStore.API.dll
 D:\OnlineStore\API\online-store-api\obj\Debug\net8.0\refint\OnlineStore.API.dll

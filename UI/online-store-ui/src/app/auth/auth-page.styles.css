@@ -1,0 +1,363 @@
+/* ===========================================
+   Authentication Pages Background Styling
+   Login & Register Pages Only
+   =========================================== */
+
+.auth-page-container {
+  /* Full viewport coverage */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  /* Background image settings */
+  background-image: url('/onlie-store-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Prevents scrolling issues on mobile */
+  overflow-x: hidden;
+  
+  /* Smooth transitions */
+  transition: background-image 0.3s ease-in-out;
+}
+
+/* Dark overlay for contrast and readability */
+.auth-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Form container - sits on top of overlay */
+.auth-form-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  margin: auto;
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Slide up animation for form */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Semi-transparent form panel */
+.auth-form-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Form title styling */
+.auth-form-panel h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form subtitle/description */
+.auth-form-panel p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Form group spacing */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  background: white;
+}
+
+/* Error state styling */
+.form-group input.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-group input.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Link styling */
+.auth-form-panel a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.auth-form-panel a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Bottom text with links */
+.auth-form-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===========================================
+   Responsive Design - Tablet (768px and up)
+   =========================================== */
+
+@media (max-width: 768px) {
+  .auth-page-container {
+    background-attachment: scroll;
+  }
+
+  .auth-form-wrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .auth-form-panel {
+    padding: 30px 20px;
+  }
+
+  .auth-form-panel h2 {
+    font-size: 24px;
+  }
+}
+
+/* ===========================================
+   Responsive Design - Mobile (480px and below)
+   =========================================== */
+
+@media (max-width: 480px) {
+  .auth-page-container {
+    padding: 10px;
+  }
+
+  .auth-form-wrapper {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .auth-form-panel {
+    padding: 25px 15px;
+    border-radius: 8px;
+  }
+
+  .auth-form-panel h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .auth-form-panel p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .btn-submit {
+    padding: 11px;
+    font-size: 15px;
+  }
+
+  .auth-form-footer {
+    font-size: 13px;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}
+
+/* ===========================================
+   Accessibility & High Contrast Mode
+   =========================================== */
+
+@media (prefers-contrast: more) {
+  .auth-page-container::before {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .auth-form-panel {
+    background: rgba(255, 255, 255, 0.98);
+    border: 2px solid #000;
+  }
+
+  .form-group input {
+    background: white;
+    border: 2px solid #333;
+  }
+
+  .form-group input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px #007bff;
+  }
+}
+
+/* Reduced motion for users preferring it */
+@media (prefers-reduced-motion: reduce) {
+  .auth-form-wrapper {
+    animation: none;
+  }
+
+  .form-group input,
+  .btn-submit,
+  .auth-form-panel a {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .auth-page-container::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .auth-form-panel {
+    background: rgba(40, 40, 40, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .auth-form-panel h2,
+  .form-group label {
+    color: #f0f0f0;
+  }
+
+  .auth-form-panel p {
+    color: #b0b0b0;
+  }
+
+  .form-group input {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-group input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #007bff;
+  }
+
+  .auth-form-panel a {
+    color: #66b3ff;
+  }
+
+  .auth-form-panel a:hover {
+    color: #99ccff;
+  }
+
+  .auth-form-footer {
+    color: #b0b0b0;
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===========================================
+   Browser Compatibility Fallbacks
+   =========================================== */
+
+/* Fallback for browsers not supporting backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .auth-form-panel {
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  .auth-page-container::before {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: none;
+  }
+}
+
+/* Fallback for browsers not supporting fixed background */
+@supports not (background-attachment: fixed) {
+  .auth-page-container {
+    background-attachment: scroll;
+  }
+}

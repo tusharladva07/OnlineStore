@@ -1,0 +1,66 @@
+<div class="auth-page-container">
+  <div class="auth-form-wrapper">
+    <div class="auth-form-panel">
+      <h2>Welcome Back</h2>
+      <p>Sign in to your account to continue</p>
+          <!-- Success Alert -->
+          <div class="alert alert-success alert-dismissible fade show" *ngIf="successMessage" role="alert">
+            <strong>Success!</strong> {{ successMessage }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <!-- Warning Alert -->
+          <div class="alert alert-warning alert-dismissible fade show" *ngIf="warningMessage" role="alert">
+            <strong>Warning!</strong> {{ warningMessage }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <!-- Error Alert -->
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="errorMessage" role="alert">
+            <strong>Error!</strong> {{ errorMessage }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                formControlName="email"
+                [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+                [disabled]="isLoading">
+              <div class="invalid-feedback" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                <span *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</span>
+                <span *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                formControlName="password"
+                [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                [disabled]="isLoading">
+              <div class="invalid-feedback" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+                <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit" [disabled]="loginForm.invalid || isLoading">
+              <span *ngIf="!isLoading">Login</span>
+              <span *ngIf="isLoading">
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                Logging in...
+              </span>
+            </button>
+          </form>
+          <div class="auth-form-footer">
+            <p>Don't have an account? <a routerLink="/register">Sign up here</a></p>
+          </div>
+    </div>
+  </div>
+</div>

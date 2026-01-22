@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -24,18 +24,22 @@
         "StatusCode": 200
       },
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
         "StatusCode": 400
+      },
+      {
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
       }
     ]
   },
@@ -55,7 +59,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -64,18 +68,31 @@
         "StatusCode": 200
       },
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
         "StatusCode": 400
+      },
+      {
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 409
+      },
+      {
+        "Type": "online_store_api.Models.Responses.ApiResponse\u00601[[online_store_api.Models.Responses.TokenResponse, OnlineStore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
       }
     ]
   }
